@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) {
@@ -112,6 +113,75 @@ public class Main {
         //%c - символьное представление
         String result = String.format("Жили у бабуси %d веселых гуся", 2);
         System.out.println(result);
+
+        //Поиск символа в строке
+        name = "Oleg";
+        System.out.println(name.charAt(3));
+
+        //Поиск совпадений в строке
+        String testString = "testing";
+        boolean test = testString.contains("test");
+        System.out.println(test);
+
+        String str1 = "   Star Wars   ";
+        boolean test2 = str1.startsWith("   ");
+        System.out.println(test2);
+
+        test2 = str1.endsWith("ars");
+        System.out.println(test2);
+
+        //Обрезание пробелов строки
+        String trimmedString = str1.trim();
+        System.out.println(trimmedString);
+
+        //Поиск символа в строке
+        String text = "обороноспособность";
+        int index1 = text.indexOf("б" , index + 1);
+        System.out.println(index1);
+
+        //вывод части исходной строки
+        //вырезает строку c 6го исмвола и до конца строки
+        String world = "Hello World".substring(6);
+        System.out.println(world);
+
+        //StringBuffer
+        StringBuffer sb = new StringBuffer("test");
+        sb.append("-").append("test");
+        sb.append(true);
+        sb.append(1);
+        System.out.println(sb);
+
+        //подстановка строки в строку
+        StringBuffer sb1 = new StringBuffer("I Java!");
+        sb1.insert(2,"love ");//2 - индекси символа, после которого будет вставлена строка
+        System.out.println(sb1);
+
+        //Поменять порядок символов на обратный
+        StringBuffer sb2 = new StringBuffer("palindrome");
+        sb2.reverse();
+        System.out.println(sb2);
+
+        //удалить часть строки
+        StringBuffer phrases = new StringBuffer("I do not like Java!");
+        phrases.delete(2, 8);
+        System.out.println(phrases);
+
+        //Пример разбиения строки на слова
+        String s = "Best Java programming language.";
+        StringTokenizer st = new StringTokenizer(s);
+
+        while (st.hasMoreTokens()) {
+            System.out.println(st.nextToken());
+        }
+
+        //Пример разбиения строки на слова, используя запятую, в качестве разделителя
+        String s1 = "Best, Java, programming,language";
+        StringTokenizer st1 = new StringTokenizer(s1, ",");
+
+        while (st1.hasMoreTokens()) {
+            System.out.println(st1.nextToken());
+        }
+
 
     }
 }
