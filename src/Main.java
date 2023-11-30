@@ -182,6 +182,9 @@ public class Main {
             System.out.println(st1.nextToken());
         }
 
+        StringBuffer sb3 = new StringBuffer("abc");
+        StringBuffer sb4 = new StringBuffer("abc");
+        System.out.println(sb3.equals(sb4));
 
     }
 }
